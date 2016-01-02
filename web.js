@@ -10,7 +10,7 @@ keystone.init({
   'view engine': 'jade',
 
   'auto update': true,
-  'mongo': 'mongodb://localhost/keystone-blog-demo-r66d'
+  'mongo': 'mongodb://localhost/keystone-blog-demo-r66d',
 
   'session': true,
   'auth': true,

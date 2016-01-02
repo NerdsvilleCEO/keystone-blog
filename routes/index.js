@@ -1,4 +1,4 @@
-var keystone = require('keystone').
+var keystone = require('keystone'),
     middleware = require('./middleware'),
     importRoutes = keystone.importer(__dirname);
 
@@ -12,7 +12,7 @@ keystone.set('404', function(req, res, next) {
 
 keystone.set('500', function(err, req, res, next) {
   var title, message;
-  if(err instanceOf Error){
+  if(err instanceof Error){
     message = err.message;
     err = err.stack;
   }
@@ -25,4 +25,5 @@ var routes = {
 
 exports = module.exports = function(app){
   app.get('/', routes.views.index);
+  app.get('/blog/', routes.views.blog);
 }
